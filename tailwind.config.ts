@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,11 +85,62 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-in-left': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
+				},
+				'slide-in-right': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
+				},
+				'pulse-bot': {
+					'0%, 100%': {
+						boxShadow: '0 0 0 0 rgba(59, 130, 246, 0.7)'
+					},
+					'70%': {
+						boxShadow: '0 0 0 10px rgba(59, 130, 246, 0)'
+					}
+				},
+				'typing': {
+					'0%, 60%': {
+						transform: 'translateY(0px)'
+					},
+					'30%': {
+						transform: 'translateY(-10px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'slide-in-left': 'slide-in-left 0.4s ease-out',
+				'slide-in-right': 'slide-in-right 0.4s ease-out',
+				'pulse-bot': 'pulse-bot 2s infinite',
+				'typing': 'typing 1.4s infinite ease-in-out'
 			}
 		}
 	},
